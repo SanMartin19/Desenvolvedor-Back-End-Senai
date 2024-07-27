@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-27 02:40:45 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7U0VOQUk1MjQtMTI0Mjk3OzIwMjQtMDctMjc7IjEyOjQ0OjEyICI7MzI3Ng=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7U0VOQUk1MjQtMTI0Mjk3OzIwMjQtMDctMjc7IjAyOjQwOjQ1ICI7MzszMzg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1" type="Integer" array="False" size=""/>
+            <comment text="Usado para indentificar se &#233; par ou impar,"/>
+            <output expression="&quot;Digite o primeiro n&#250;mero1&quot;" newline="True"/>
+            <input variable="num1"/>
+            <if expression="num1%2==0">
+                <then>
+                    <output expression="&quot; o n&#250;mero &#233; Par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot; O n&#250;mero &#233; Impar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
