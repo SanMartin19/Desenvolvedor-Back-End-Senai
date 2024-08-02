@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="kalya"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-01 11:28:53 "/>
+        <attribute name="created" value="a2FseWE7REVTS1RPUC0xNEY2QUlKOzIwMjQtMDgtMDE7IjA4OjUxOjA4ICI7Mjc0NA=="/>
+        <attribute name="edited" value="a2FseWE7REVTS1RPUC0xNEY2QUlKOzIwMjQtMDgtMDE7IjExOjI4OjUzICI7MzsyODUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="altura, menorAltura, maiorAltura, soma, media, i" type="Real" array="False" size=""/>
+            <comment text="Declarando os valores das variav&#233;is."/>
+            <assign variable="menorAltura" expression="3"/>
+            <assign variable="maiorAltura" expression="0"/>
+            <assign variable="soma" expression="0"/>
+            <assign variable="media" expression="0"/>
+            <comment text="Declarando variavel do loop"/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <comment text="Introdu&#231;&#227;o para inicializa&#231;&#227;o do programa"/>
+                <output expression="&quot;Digite sua altura:&quot;" newline="True"/>
+                <input variable="altura"/>
+                <comment text="verifica&#231;&#227;o para encontrar maior altura"/>
+                <if expression="altura&gt;maiorAltura and altura&lt;=3">
+                    <then>
+                        <assign variable="maiorAltura" expression="altura"/>
+                    </then>
+                    <else/>
+                </if>
+                <comment text="verifica&#231;&#227;o para encontrar menor altura"/>
+                <if expression="altura&lt;menorAltura and altura&gt;0">
+                    <then>
+                        <assign variable="menorAltura" expression="altura"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="soma" expression="altura+soma"/>
+                <assign variable="media" expression="soma/10"/>
+            </for>
+            <output expression="&quot;A menor altura: &quot;&amp;menorAltura" newline="True"/>
+            <output expression="&quot;A maior altura: &quot;&amp;maiorAltura" newline="True"/>
+            <output expression="&quot;A soma: &quot;&amp;soma" newline="True"/>
+            <output expression="&quot;A m&#233;dia: &quot;&amp;media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
