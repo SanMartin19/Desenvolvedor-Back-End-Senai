@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="kalya"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-02 11:01:57 "/>
+        <attribute name="created" value="a2FseWE7REVTS1RPUC0xNEY2QUlKOzIwMjQtMDgtMDI7IjA5OjMwOjAxICI7MjczNg=="/>
+        <attribute name="edited" value="a2FseWE7REVTS1RPUC0xNEY2QUlKOzIwMjQtMDgtMDI7IjExOjAxOjU3ICI7MjsyODQ3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, tabuada, resposta" type="Integer" array="False" size=""/>
+            <comment text="Declarando as variav&#233;is do jogo"/>
+            <do expression="resposta==tabuada">
+                <assign variable="num1" expression="0"/>
+                <output expression="&quot; Digite o primeiro numero:&quot;" newline="True"/>
+                <input variable="num1"/>
+                <output expression="&quot; Digite o segundo numero:&quot;" newline="True"/>
+                <assign variable="num2" expression="0"/>
+                <input variable="num2"/>
+                <output expression="&quot; Digite a resposta: &quot;" newline="True"/>
+                <assign variable="resposta" expression="0"/>
+                <assign variable="tabuada" expression="num1 * num2"/>
+                <input variable="resposta"/>
+                <comment text="Verifica&#231;&#227;o da verdade"/>
+            </do>
+            <output expression="&quot; Voc&#234; errou.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
