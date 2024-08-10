@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="ex3 Algoritmo maior numero de uma lista"/>
+        <attribute name="authors" value="caiov"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-10 10:06:06 "/>
+        <attribute name="created" value="Y2Fpb3Y7Q0FJTy1QQzsyMDI0LTA4LTEwOyIwMToyNTowOCAiOzIxOTQ="/>
+        <attribute name="edited" value="Y2Fpb3Y7Q0FJTy1QQzsyMDI0LTA4LTEwOyIwMTo0ODoyMyAiOzE7Y2Fpb3Y7Q0FJTy1QQzsyMDI0LTA4LTEwOyIwMToyNTowOCAiOzQ1NTc="/>
+        <attribute name="edited" value="Y2Fpb3Y7Q0FJTy1QQzsyMDI0LTA4LTEwOyIwMTo1ODo1MiAiOzI7MjMwOA=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1KQlJLMDVMOzIwMjQtMDgtMTA7IjA5OjUxOjE2ICI7MTtjYWlvdjtDQUlPLVBDOzIwMjQtMDgtMTA7IjAxOjI1OjA4ICI7ZXgzIEFsZ29yaXRtbyBtYWlvciBudW1lcm8gZGUgdW1hIGxpc3RhICgxKS5mcHJnOzEwMTgx"/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1KQlJLMDVMOzIwMjQtMDgtMTA7IjEwOjA2OjA2ICI7MTszNTUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="texto, teste" type="String" array="False" size=""/>
+            <assign variable="teste" expression="&quot;a&quot;"/>
+            <comment text="variavel 'n' armazena o tamanho da lista, que ser&#225; fornecido pelo usu&#225;rio."/>
+            <assign variable="texto" expression="&quot;a&quot;"/>
+            <comment text="variavel 'i' &#233; usada como um contador dentro dos loops 'For'"/>
+            <declare name="max" type="Integer" array="False" size=""/>
+            <comment text="variavel 'max' armazena o maior n&#250;mero encontrado na lista.&#10;"/>
+            <comment text="usuario digita o tamanho da lista que deseja&#13;&#10;"/>
+            <comment text="Vetor 'lista' para armazenar os n&#250;meros da lista.&#10;"/>
+            <comment text="Declarei a vari&#225;vel lista depois que o usu&#225;rio digitou o tamanho desejado da lista, para que ela possa receber o valor da vari&#225;vel 'n'"/>
+            <assign variable="teste" expression="teste1(teste)"/>
+            <comment text="Utilizei um 'loop For' para percorrer os elementos do vetor 'lista', cujo tamanho foi previamente definido pelo usu&#225;rio (variavel 'n'). Configurei o loop para come&#231;ar em '0 e ir at&#233; n-1', onde 'n' &#233; o tamanho da lista."/>
+            <output expression="teste" newline="True"/>
+            <comment text="Inicialize a vari&#225;vel `max` com o valor de `lista[0]` fora do loop usando um bloco de Atribui&#231;&#227;o. Isso garante que `max` comece com um valor v&#225;lido para compara&#231;&#245;es, permitindo que o algoritmo encontre o maior n&#250;mero na lista ao comparar `max` com os demais elementos. Essa abordagem assegura que `max` ser&#225; atualizado corretamente e conter&#225; o maior valor ao final do processo."/>
+            <comment text="Esse segundo loop For &#233; respons&#225;vel por percorrer todos os elementos da lista, come&#231;ando do &#237;ndice 1"/>
+            <comment text="ira mostrar para o usuario o maior numero da lista"/>
+        </body>
+    </function>
+    <function name="teste1" type="String" variable="texto">
+        <parameters>
+            <parameter name="texto" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="n, i, max" type="Integer" array="False" size=""/>
+            <assign variable="max" expression="0"/>
+            <output expression="&quot;Digite o tamanho da lista: &quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="lista" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Digite o n&#250;mero na posi&#231;&#227;o &quot;&amp;i+1&amp;&quot;: &quot;" newline="True"/>
+                <input variable="lista[i]"/>
+                <comment text="O usu&#225;rio ir&#225; digitar os n&#250;meros da lista, e esses n&#250;meros ser&#227;o armazenados na vari&#225;vel `lista`."/>
+            </for>
+            <assign variable="max" expression="lista[0]"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <comment text=" O uso do 'if' dentro do loop compara cada valor lista[i] com o valor atual de 'max'. Se lista[i] for maior, isso significa que encontramos um novo maior valor, e max &#233; atualizado para refletir esse valor. Esse processo garante que, ao final do loop, 'max' conter&#225; o maior n&#250;mero encontrado na 'lista'.&#10;&#10;&#10;&#10;&#10;&#10;&#10;"/>
+                <if expression="lista[i] &gt; max">
+                    <then>
+                        <assign variable="max" expression="lista[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="texto" expression="&quot;O maior n&#250;mero na lista &#233;: &quot;&amp;max"/>
+        </body>
+    </function>
+</flowgorithm>

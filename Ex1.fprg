@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Eledilson"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-04 09:30:31 "/>
+        <attribute name="created" value="RWxlZGlsc29uO0RFU0tUT1AtMTRGNkFJSjsyMDI0LTA4LTA0OyIwOToxNTo1NiAiOzMxNDg="/>
+        <attribute name="edited" value="RWxlZGlsc29uO0RFU0tUT1AtMTRGNkFJSjsyMDI0LTA4LTA0OyIwOTozMDozMSAiOzE7MzI0Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="vari&#225;veis contidas no programa, sendo f = Fahreinheit"/>
+            <declare name="f, total" type="Integer" array="False" size=""/>
+            <comment text="Introduzindo o usu&#225;rio"/>
+            <output expression="&quot;Digite uma temperatura em Fahreinheit:&quot;" newline="True"/>
+            <input variable="f"/>
+            <comment text="sec&#231;&#227;o do programa que anexa o subprograma a vari&#225;vel do programa"/>
+            <assign variable="total" expression="conversor(f)"/>
+            <comment text="realizada a formula contida no subprograma, declara-se o resultado"/>
+            <output expression="&quot;A temperatura &#233;: &quot;&amp;total&amp;&quot;&#176;C&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="conversor" type="Integer" variable="total">
+        <parameters>
+            <parameter name="f" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="Parametros do subprograma"/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <comment text="Declarando a vari&#225;vel que ser&#225; armazenada a condi&#231;&#227;o"/>
+            <assign variable="total" expression="(f-32)/1.8"/>
+            <comment text="atribuido a formula "/>
+        </body>
+    </function>
+</flowgorithm>

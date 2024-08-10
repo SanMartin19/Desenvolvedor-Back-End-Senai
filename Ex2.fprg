@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Eledilson"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-09 08:58:31 "/>
+        <attribute name="created" value="RWxlZGlsc29uO0RFU0tUT1AtMTRGNkFJSjsyMDI0LTA4LTA1OyIwODoyMjo1NSAiOzMxNDU="/>
+        <attribute name="edited" value="RWxlZGlsc29uO0RFU0tUT1AtMTRGNkFJSjsyMDI0LTA4LTA5OyIwODo1ODozMSAiOzI7MzI2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Definindo a quantidade de op&#231;&#227;o de produtos"/>
+            <declare name="produto" type="String" array="True" size="3"/>
+            <comment text="Definindo as op&#231;&#245;es op&#231;oes de custo/venda"/>
+            <declare name="custoProduto, vendaProduto" type="Integer" array="True" size="3"/>
+            <comment text="Declarando as variav&#233;is do programa"/>
+            <declare name="item, soma, lucro" type="Integer" array="False" size=""/>
+            <assign variable="item" expression="0"/>
+            <assign variable="soma" expression="0"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="3" direction="inc" step="1">
+                <comment text="Declarando o loop de instru&#231;oes para o ususario interagir com o programa "/>
+                <output expression="&quot;Qual e o &quot;&amp;i&amp;&quot;&#176; produto:&quot;" newline="True"/>
+                <input variable="produto[item]"/>
+                <output expression="&quot; Qual o valor do produto:&quot;" newline="True"/>
+                <input variable="custoProduto[item]"/>
+                <output expression="&quot;Por quantos vc quer vender:&quot;" newline="True"/>
+                <input variable="vendaProduto[item]"/>
+                <assign variable="item" expression="item +1"/>
+            </for>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <comment text="Express&#245;es aritm&#233;ticas para calculos, usando os valores armazenados nasa vari&#225;veis."/>
+                <assign variable="lucro" expression="vendaProduto[i] - custoProduto[i]"/>
+                <output expression="&quot;A margem de Lucro do produto: &quot; &amp;produto[soma]&amp; &quot; &#233; &quot; &amp;lucro&amp; &quot; Real &quot;" newline="True"/>
+                <assign variable="soma" expression="soma+1"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
